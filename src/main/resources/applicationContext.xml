@@ -11,4 +11,9 @@
           class="learning_spring.ClassicalMusic">
     </bean>
 
+    <bean id="musicPlayer"
+          class="learning_spring.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
 </beans>
