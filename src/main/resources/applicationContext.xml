@@ -11,11 +11,23 @@
     <bean id="musicBean"
           class="learning_spring.ClassicalMusic">
     </bean>
+    <bean id="musicBean1"
+          class="learning_spring.PopMusic">
+    </bean>
+    <bean id="musicBean2"
+          class="learning_spring.RockMusic">
+    </bean>
+
 
     <bean id="musicPlayer"
           class="learning_spring.MusicPlayer">
-        <property name="music" ref="musicBean" />
-
+        <property name="musicList" >
+            <list>
+                <ref bean="musicBean"/>
+                <ref bean="musicBean1"/>
+                <ref bean="musicBean2"/>
+            </list>
+        </property>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
