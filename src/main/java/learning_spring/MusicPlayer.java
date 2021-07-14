@@ -34,17 +34,9 @@ public class MusicPlayer {
         this.name = name;
     }
 
-    //IoC
-    public MusicPlayer(List<Music> musicList){
-        this.musicList = musicList;
-    }
-
-    public MusicPlayer(){}
-
-
     public void playMusic(){
-        for(Music s : musicList) {
-            System.out.println("Playing: " + s.getSong());
+        for(Music music : musicList) {
+            System.out.println("Playing: " + music.getSong());
         }
 
        // System.out.println("Playing: " ); + musicList.forEach(e -> e.getSong())
