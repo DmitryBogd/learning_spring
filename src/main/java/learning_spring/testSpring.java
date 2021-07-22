@@ -9,7 +9,6 @@ public class testSpring {
         );
 
 
-
         Computer computer = context.getBean("computer", Computer.class);
         System.out.println(computer);
 
