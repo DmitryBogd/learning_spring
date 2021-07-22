@@ -9,8 +9,14 @@ public class testSpring {
         );
 
 
-        Computer computer = context.getBean("computer", Computer.class);
-        System.out.println(computer);
+
+
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+
+        musicPlayer.playMusic(MusicType.Pop);
+        musicPlayer.playMusic(MusicType.Rock);
+        musicPlayer.playMusic(MusicType.Classical);
+
 
         context.close();
     }
