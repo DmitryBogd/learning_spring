@@ -24,12 +24,12 @@ public class MusicPlayer {
     private Music music3;
 
 
-    public void playMusic(Enum MusicType) {
+    public String playMusic(Enum MusicType) {
         if (MusicType.equals(learning_spring.MusicType.Classical) )
-            System.out.println(music2.getSong().get(random.nextInt(3)));
+        return "Playing: " + music2.getSong().get(random.nextInt(3));
         else if (MusicType.equals(learning_spring.MusicType.Rock))
-            System.out.println(music.getSong().get(random.nextInt(3)));
+            return "Playing: " + music.getSong().get(random.nextInt(3));
         else
-            System.out.println(music3.getSong().get(random.nextInt(3)));
+            return "Playing: " + music3.getSong().get(random.nextInt(3));
     }
 }
