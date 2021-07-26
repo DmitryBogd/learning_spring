@@ -10,7 +10,7 @@
     <!-- Включаем сканирование классов в пакете -->
     <context:component-scan base-package="learning_spring"/>
 
-
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
 
 </beans>
